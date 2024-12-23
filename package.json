@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build --force",
+    "build": "vite build --force --legacy-peer",
     "lint": "eslint .",
     "preview": "vite preview"
   },
