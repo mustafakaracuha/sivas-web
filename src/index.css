@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slide-enter {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.slide-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 500ms ease, opacity 500ms ease;
+    z-index: 2;
+}
+
+.slide-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-exit-active {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.slide-appear {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide-appear-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 500ms ease, opacity 500ms ease;
+}
