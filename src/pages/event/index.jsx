@@ -101,7 +101,9 @@ function index() {
                         </button>
                         <button
                             onClick={() => handleFilterChange({ target: { value: "Gelecekteki Etkinlikler" } })}
-                            className={`px-4  transition-all duration-300 py-2 text-sm bg-gray-200 rounded-full ${filter === "Gelecekteki Etkinlikler" ? "!bg-gray-700 text-white" : "bg-white text-gray-500"}`}
+                            className={`px-4  transition-all duration-300 py-2 text-sm bg-gray-200 rounded-full ${
+                                filter === "Gelecekteki Etkinlikler" ? "!bg-gray-700 text-white" : "bg-white text-gray-500"
+                            }`}
                         >
                             <LuCalendarCheck2 size={19} className="inline-block mr-2" /> Gelecekteki Etkinlikler
                         </button>
@@ -193,25 +195,41 @@ function index() {
                         ←
                     </button>
 
-                    {/* Sayfa Numaraları */}
-                    {pageNumbers.map((number) => (
-                        <button
-                            key={number}
-                            onClick={() => handlePageChange(number)}
-                            className={`px-4 transition-all duration-300 py-2 mx-1 rounded-full ${currentPage === number ? "bg-gray-700 text-white" : "bg-white text-gray-500 hover:bg-gray-200"}`}
-                        >
-                            {number}
-                        </button>
-                    ))}
+                    {/* Pagination */}
+                    {currentEvents.length > 0 && (
+                        <div className="flex mt-52 justify-center items-center space-x-2">
+                            {/* Sol Ok */}
+                            <button
+                                onClick={() => handlePageChange(currentPage > 1 ? currentPage - 1 : 1)}
+                                className="px-3 py-2 mx-1 rounded-full bg-white text-gray-500 hover:bg-gray-200 disabled:opacity-50"
+                                disabled={currentPage === 1}
+                            >
+                                ←
+                            </button>
 
-                    {/* Sağ Ok */}
-                    <button
-                        onClick={() => handlePageChange(currentPage < pageNumbers.length ? currentPage + 1 : pageNumbers.length)}
-                        className="px-3 py-2 mx-1 rounded-full bg-white text-gray-500 hover:bg-gray-200 disabled:opacity-50"
-                        disabled={currentPage === pageNumbers.length}
-                    >
-                        →
-                    </button>
+                            {/* Sayfa Numaraları */}
+                            {pageNumbers.map((number) => (
+                                <button
+                                    key={number}
+                                    onClick={() => handlePageChange(number)}
+                                    className={`px-4 py-2 transition-all duration-300 mx-1 rounded-full ${
+                                        currentPage === number ? "bg-gray-700 text-white" : "bg-white text-gray-500 hover:bg-gray-200"
+                                    }`}
+                                >
+                                    {number}
+                                </button>
+                            ))}
+
+                            {/* Sağ Ok */}
+                            <button
+                                onClick={() => handlePageChange(currentPage < pageNumbers.length ? currentPage + 1 : pageNumbers.length)}
+                                className="px-3 py-2 mx-1 rounded-full bg-white text-gray-500 hover:bg-gray-200 disabled:opacity-50"
+                                disabled={currentPage === pageNumbers.length}
+                            >
+                                →
+                            </button>
+                        </div>
+                    )}
                 </div>
             )}
         </div>
