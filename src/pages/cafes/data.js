@@ -207,7 +207,7 @@ export const locationsData = [
         image: "https://lh3.googleusercontent.com/p/AF1QipONPNPnv9qPXRdYNo8GYaL7AgczcHrO7p_kBMjs=s1360-w1360-h1020-rw",
     }, 
     {
-        id: 23,
+        id: 24,
         title: "Şale Kitap Kafe",
         description: "Hamidiye millet bahçesinde tarih ve kitap eşliğinde kahve keyfi yapabilirsiniz",
         category: "Kitap Kafe",
@@ -216,7 +216,7 @@ export const locationsData = [
         image: "https://lh3.googleusercontent.com/p/AF1QipN0bhs336rrjIg6aq5BeLKbYoP9X5fxj3NbTKij=s1360-w1360-h1020-rw",
     }, 
     {
-        id: 24,
+        id: 25,
         title: "Pasaj Sahaf",
         description: "Merkezde kitap eşliğinde çay ve kahve keyfi yapabilirsiniz",
         category: "Kitap Kafe",
