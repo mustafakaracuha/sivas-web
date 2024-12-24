@@ -71,10 +71,5 @@ Projeye katkıda bulunmak isterseniz:
    ```
 4. Bir "Pull Request" oluşturun.
 
-## Lisans
-
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
-
----
 
 Bu proje, Sivas'ı keşfetmek isteyenler için ideal bir rehber olmayı hedeflemektedir. Her türlü geri bildirim ve katkılarınızı bekliyoruz!
