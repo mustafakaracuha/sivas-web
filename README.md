@@ -39,7 +39,7 @@ Projeyi çalıştırdıktan sonra tarayıcınızda [http://localhost:5173](http:
 ## Ekran Görüntüleri
 
 ### Anasayfa
-![Anasayfa](src/assets/screenshot/home.png)
+![Anasayfa](src/assets/screenshot/homes.png)
 
 ### Etkinlikler Sayfası
 ![Mekanlar Sayfası](src/assets/screenshot/events.png)
