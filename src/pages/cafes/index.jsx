@@ -7,6 +7,7 @@ import { TbSoup } from "react-icons/tb";
 import { FaStar } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
 
+import CafeDetailDrawer from "./cafeDetail";
 import Pagination from "../../components/pagination";
 import { locationsData } from "./data";
 
@@ -15,6 +16,10 @@ function index() {
     const [filter, setFilter] = useState("Tümü");
     const [category, setCategory] = useState("Tümü");
     const [currentPage, setCurrentPage] = useState(1);
+
+    const [selectedCafe, setSelectedCafe] = useState(null);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
     const eventsPerPage = 4;
 
     const categoryMapping = {
@@ -26,6 +31,17 @@ function index() {
         Barlar: "Bar",
         "Kitap Kafeler": "Kitap Kafe",
     };
+
+
+    const handleCafeClick = (event) => {
+        setSelectedCafe(event); 
+        setIsDrawerOpen(true);
+    };
+
+    const closeDrawer = () => {
+        setIsDrawerOpen(false);
+    };
+
 
     const handleCategoryChange = (event) => {
         const categoryValue = event.target.value;
@@ -90,7 +106,7 @@ function index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 flex-grow">
                 {currentEvents.length > 0 ? (
                     currentEvents.map((event) => (
-                        <div key={event.id} className="bg-white h-[28rem] rounded-lg shadow-lg relative flex flex-col">
+                        <div key={event.id} onClick={() => handleCafeClick(event)} className="bg-white h-[28rem] rounded-lg shadow-lg relative flex flex-col">
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
                             <div className="px-4 flex-grow">
                                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">{event.category}</div>
@@ -118,6 +134,8 @@ function index() {
                     </p>
                 )}
             </div>
+
+            <CafeDetailDrawer event={selectedCafe} isOpen={isDrawerOpen} onClose={closeDrawer} />
 
             {currentEvents.length > 0 && (
                 <>
