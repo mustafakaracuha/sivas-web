@@ -106,7 +106,7 @@ function index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 flex-grow">
                 {currentEvents.length > 0 ? (
                     currentEvents.map((event) => (
-                        <div key={event.id} onClick={() => handleCafeClick(event)} className="bg-white h-[28rem] rounded-lg shadow-lg relative flex flex-col">
+                        <div key={event.id} onClick={() => handleCafeClick(event)} className="bg-white h-[30rem] rounded-lg shadow-lg relative flex flex-col">
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
                             <div className="px-4 flex-grow">
                             <div className="absolute top-2 right-2 bg-red-500 font-semibold text-white text-[11px] px-2 py-1 rounded-full">{event.category}</div>
