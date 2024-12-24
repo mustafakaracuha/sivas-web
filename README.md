@@ -41,10 +41,10 @@ Projeyi çalıştırdıktan sonra tarayıcınızda [http://localhost:5173](http:
 ### Anasayfa
 ![Anasayfa](src/assets/screenshot/1.png)
 
-### Mekanlar Sayfası
+### Etkinlikler Sayfası
 ![Mekanlar Sayfası](src/assets/screenshot/2.png)
 
-### Etkinlikler Sayfası
+### Mekanlar Sayfası
 ![Etkinlikler Sayfası](src/assets/screenshot/3.png)
 
 ### Detay Sayfası
