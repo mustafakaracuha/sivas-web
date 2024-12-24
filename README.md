@@ -52,6 +52,7 @@ Projeyi çalıştırdıktan sonra tarayıcınızda [http://localhost:5173](http:
 - **React**: Kullanıcı arayüzü için
 - **Vite**: Hızlı geliştirme ortamı
 - **Tailwind CSS**: Modern ve hızlı bir stil kütüphanesi
+- **React Icons**: Modern icon kütüphanesi
 
 ## Katkıda Bulunma
 
