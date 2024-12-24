@@ -13,7 +13,7 @@ function Index() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
-        }, 2500);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
