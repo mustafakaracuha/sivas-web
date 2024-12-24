@@ -31,7 +31,7 @@ export const locationsData = [
     },
     {
         id: 4,
-        title: "Sivas Atatürk Kongre Müzesi",
+        title: "Atatürk Kongre Müzesi",
         description: "Sivas Atatürk Kongre Müzesi, Türk Kurtuluş Savaşı'nın önemli dönüm noktalarından birini oluşturan Sivas Kongresi'ne ev sahipliği yapmıştır. Müze, bu dönemin belgeleri ve hatıralarını sergilemektedir.",
         category: "Müze",
         location: "Mehmetpaşa, Müze Müdürlüğü, Taşlı Sk. 58040 Merkez/Sivas",
@@ -41,7 +41,7 @@ export const locationsData = [
     },
     {
         id: 5,
-        title: "Sivas Arkeoloji Müzesi",
+        title: "Arkeoloji Müzesi",
         description: "Sivas Arkeoloji Müzesi, bölgedeki arkeolojik kazılardan çıkarılan Roma ve Bizans dönemine ait eserlerin sergilendiği önemli bir kültürel merkezdir.",
         category: "Müze",
         location: "Yüceyurt, Rahmi Günay Cd. 58040 Merkez/Sivas",
