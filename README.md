@@ -29,7 +29,7 @@ Bu projeyi çalıştırmak için aşağıdaki adımları izleyin:
 
 4. Uygulamayı başlatın:
    ```bash
-   npm run dev
+   npm start
    ```
 
 ## Kullanım
