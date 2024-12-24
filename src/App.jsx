@@ -28,7 +28,7 @@ function AnimatedRoutes() {
 function App() {
     return (
         <Router>
-            <div className="flex items-center justify-center h-full">
+            <div className="">
                 <Navbar />
                 <div className="flex-1 w-full h-screen overflow-hidden">
                     <AnimatedRoutes />

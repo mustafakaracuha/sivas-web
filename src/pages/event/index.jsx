@@ -5,6 +5,7 @@ import { LuTheater, LuMusic2, LuTicketSlash, LuMapPin, LuCalendarClock, LuClock3
 import { PiConfetti } from "react-icons/pi";
 import { MdErrorOutline } from "react-icons/md";
 
+import Pagination from "../../components/pagination";
 import { eventsData } from "./data";
 
 function index() {
@@ -62,11 +63,6 @@ function index() {
     const indexOfLastEvent = currentPage * eventsPerPage;
     const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
     const currentEvents = filteredEvents.slice(indexOfFirstEvent, indexOfLastEvent);
-    const pageNumbers = [];
-
-    for (let i = 1; i <= Math.ceil(filteredEvents.length / eventsPerPage); i++) {
-        pageNumbers.push(i);
-    }
 
     const handlePageChange = (number) => {
         setCurrentPage(number);
@@ -76,7 +72,7 @@ function index() {
     const categories = ["Tümü", "Müzik", "Tiyatro", "Sinema", "Sergi", "Dans", "Konferans", "Festival", "Söyleşi"];
 
     return (
-        <div className="relative w-full h-full px-36 pt-5 flex flex-col">
+        <div className="relative w-full h-full px-32 pt-5 flex flex-col">
             {/* Filtreler */}
             <div className="w-full flex items-center justify-center flex-col mb-10">
                 <div>
@@ -185,52 +181,13 @@ function index() {
 
             {/* Pagination */}
             {currentEvents.length > 0 && (
-                <div className="flex justify-center mt-24 items-center space-x-2">
-                    {/* Sol Ok */}
-                    <button
-                        onClick={() => handlePageChange(currentPage > 1 ? currentPage - 1 : 1)}
-                        className="px-3 py-2 mx-1 rounded-full bg-white text-gray-500 hover:bg-gray-200 disabled:opacity-50"
-                        disabled={currentPage === 1}
-                    >
-                        ←
-                    </button>
-
-                    {/* Pagination */}
-                    {currentEvents.length > 0 && (
-                        <div className="flex mt-52 justify-center items-center space-x-2">
-                            {/* Sol Ok */}
-                            <button
-                                onClick={() => handlePageChange(currentPage > 1 ? currentPage - 1 : 1)}
-                                className="px-3 py-2 mx-1 rounded-full bg-white text-gray-500 hover:bg-gray-200 disabled:opacity-50"
-                                disabled={currentPage === 1}
-                            >
-                                ←
-                            </button>
-
-                            {/* Sayfa Numaraları */}
-                            {pageNumbers.map((number) => (
-                                <button
-                                    key={number}
-                                    onClick={() => handlePageChange(number)}
-                                    className={`px-4 py-2 transition-all duration-300 mx-1 rounded-full ${
-                                        currentPage === number ? "bg-gray-700 text-white" : "bg-white text-gray-500 hover:bg-gray-200"
-                                    }`}
-                                >
-                                    {number}
-                                </button>
-                            ))}
-
-                            {/* Sağ Ok */}
-                            <button
-                                onClick={() => handlePageChange(currentPage < pageNumbers.length ? currentPage + 1 : pageNumbers.length)}
-                                className="px-3 py-2 mx-1 rounded-full bg-white text-gray-500 hover:bg-gray-200 disabled:opacity-50"
-                                disabled={currentPage === pageNumbers.length}
-                            >
-                                →
-                            </button>
-                        </div>
-                    )}
-                </div>
+                <>
+                    <Pagination
+                        currentPage={currentPage}
+                        totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} // Doğru toplam sayfa sayısı
+                        onPageChange={handlePageChange}
+                    />
+                </>
             )}
         </div>
     );

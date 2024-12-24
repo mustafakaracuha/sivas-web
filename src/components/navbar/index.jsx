@@ -8,7 +8,7 @@ import { TbBuildingBank } from "react-icons/tb";
 
 function Navbar() {
     return (
-        <nav className="bg-gray-700 rounded-r-[40px] h-[20rem] rounded-br-[40px] text-white w-20 pt-5 px-3">
+        <nav className="absolute top-[17rem] bg-gray-700 rounded-r-[40px] h-[20rem] rounded-br-[40px] text-white w-20 pt-5 px-3 z-[99999]">
             <ul className="space-y-7">
                 <li className="relative group">
                     <NavLink
