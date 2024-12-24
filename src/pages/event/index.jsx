@@ -124,7 +124,7 @@ function index() {
                             <button
                                 key={cat}
                                 onClick={() => handleCategoryChange({ target: { value: cat } })}
-                                className={`px-4 py-2 transition-all duration-300 text-sm rounded-xl ${category === cat ? "!bg-blue-700 text-white" : "bg-gray-100 text-gray-500"}`}
+                                className={`px-4 py-2 transition-all duration-300 text-sm rounded-xl ${category === cat ? "!bg-blue-500 text-white" : "bg-gray-100 text-gray-500"}`}
                             >
                                 {cat === "Tümü" && <BsGrid size={19} className="inline-block mr-2" />}
                                 {cat === "Müzik" && <LuMusic2 size={19} className="inline-block mr-2" />}
