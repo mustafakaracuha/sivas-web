@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import { RiHomeLine } from "react-icons/ri";
 import { LuCalendar, LuCoffee } from "react-icons/lu";
@@ -7,8 +7,11 @@ import { TbBuildingBank } from "react-icons/tb";
 
 
 function Navbar() {
+    const location = useLocation()
+
+    
     return (
-        <nav className="absolute top-[17rem] bg-gray-700 rounded-r-[40px] h-[17rem] rounded-br-[40px] text-white w-18 pt-[1.2rem] px-3 z-[99999]">
+        <nav className={location.pathname === "/" ? "absolute top-[17rem] opacity-50 transition-all cursor-pointer hover:opacity-100 bg-gray-700 rounded-r-[40px] h-[17rem] rounded-br-[40px] text-white w-18 pt-[1.2rem] px-3 z-[99999]": "absolute top-[17rem] bg-gray-700 rounded-r-[40px] h-[17rem] rounded-br-[40px] text-white w-18 pt-[1.2rem] px-3 z-[99999]"}>
             <ul className="space-y-6">
                 <li className="relative group">
                     <NavLink
