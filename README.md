@@ -57,8 +57,8 @@ Projeyi çalıştırdıktan sonra tarayıcınızda [http://localhost:5173](http:
 ## Katkıda Bulunma
 
 Projeye katkıda bulunmak isterseniz:
-1. Depoyu çatallayın.
-2. Yeni bir dal oluşturun:
+1. Depoyu çekin.
+2. Yeni bir branch oluşturun:
    ```bash
    git checkout -b ozellik-adi
    ```
