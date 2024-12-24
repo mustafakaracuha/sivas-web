@@ -42,10 +42,10 @@ Projeyi çalıştırdıktan sonra tarayıcınızda [http://localhost:5173](http:
 ![Anasayfa](src/assets/screenshot/home.png)
 
 ### Etkinlikler Sayfası
-![Mekanlar Sayfası](src/assets/screenshot/events.png)
+![Mekanlar Sayfası](src/assets/screenshot/event.png)
 
 ### Mekanlar Sayfası
-![Etkinlikler Sayfası](src/assets/screenshot/locations.png)
+![Etkinlikler Sayfası](src/assets/screenshot/location.png)
 
 ## Kullanılan Teknolojiler
 
