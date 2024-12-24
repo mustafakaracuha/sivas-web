@@ -13,7 +13,7 @@ function index() {
     const [filter, setFilter] = useState("Tümü");
     const [category, setCategory] = useState("Tümü");
     const [currentPage, setCurrentPage] = useState(1);
-    const eventsPerPage = 4; // Sayfa başına gösterilecek etkinlik sayısı
+    const eventsPerPage = 4;
 
     const handleFilterChange = (event) => {
         const filterValue = event.target.value;
@@ -56,10 +56,9 @@ function index() {
         }
 
         setFilteredEvents(filtered);
-        setCurrentPage(1); // Kategori değiştiğinde sayfayı sıfırla
+        setCurrentPage(1);
     };
 
-    // Pagination işlemleri
     const indexOfLastEvent = currentPage * eventsPerPage;
     const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
     const currentEvents = filteredEvents.slice(indexOfFirstEvent, indexOfLastEvent);
@@ -68,7 +67,6 @@ function index() {
         setCurrentPage(number);
     };
 
-    // Kategoriler
     const categories = ["Tümü", "Müzik", "Tiyatro", "Sinema", "Sergi", "Dans", "Konferans", "Festival", "Söyleşi"];
 
     return (
@@ -130,12 +128,10 @@ function index() {
                 </div>
             </div>
 
-            {/* Etkinlikler Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 flex-grow">
                 {currentEvents.length > 0 ? (
                     currentEvents.map((event) => (
                         <div key={event.id} className="bg-white h-[33rem] rounded-lg shadow-lg relative">
-                            {/* Kategori */}
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
                             <div className="px-4">
                                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">{event.category}</div>
@@ -156,7 +152,6 @@ function index() {
                                     <p className="text-lg text-yellow-600 font-bold">{event.price} TL</p>
                                     {event.studentPrice !== null && event.studentPrice !== undefined && <p className="text-sm text-green-600">Öğrenci: {event.studentPrice} TL</p>}
                                 </div>
-                                {/* Kapasite Barı */}
                                 <p className="text-xs mt-3 text-gray-600 mb-2">Doluluk</p>
                                 <div className="w-full bg-gray-200 h-2 rounded-lg overflow-hidden">
                                     <div
@@ -179,14 +174,9 @@ function index() {
                 )}
             </div>
 
-            {/* Pagination */}
             {currentEvents.length > 0 && (
                 <>
-                    <Pagination
-                        currentPage={currentPage}
-                        totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} // Doğru toplam sayfa sayısı
-                        onPageChange={handlePageChange}
-                    />
+                    <Pagination currentPage={currentPage} totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} onPageChange={handlePageChange} />
                 </>
             )}
         </div>

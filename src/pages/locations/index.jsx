@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { BsGrid } from "react-icons/bs";
-import { LuLandmark, LuCastle } from "react-icons/lu";
+import { LuCastle } from "react-icons/lu";
 import { BiWater } from "react-icons/bi";
 import { TbBuildingCottage, TbBuildingCastle, TbBuildingBank } from "react-icons/tb";
 import { PiTreePalm, PiParkLight } from "react-icons/pi";
@@ -61,12 +61,10 @@ function index() {
         setCurrentPage(number);
     };
 
-    // Kategoriler
     const categories = ["Tümü", "Camiiler", "Kaleler", "Hanlar", "Konaklar", "Müzeler", "Termal Kaplıcalar", "Parklar", "Doğal Güzellikler"];
 
     return (
         <div className="relative w-full h-full px-32 pt-5 flex flex-col">
-            {/* Filtreler */}
             <div className="w-full flex items-center justify-center flex-col mb-10">
                 <div>
                     <div className="space-x-4 mt-6">
@@ -92,12 +90,10 @@ function index() {
                 </div>
             </div>
 
-            {/* Etkinlikler Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 flex-grow">
                 {currentEvents.length > 0 ? (
                     currentEvents.map((event) => (
                         <div key={event.id} className="bg-white h-[28rem] rounded-lg shadow-lg relative">
-                            {/* Kategori */}
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
                             <div className="px-4">
                                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">{event.category}</div>
@@ -114,16 +110,11 @@ function index() {
                 )}
             </div>
 
-            {/* Pagination */}
             {currentEvents.length > 0 && (
-            <>
-            <Pagination
-                currentPage={currentPage}
-                totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} // Doğru toplam sayfa sayısı
-                onPageChange={handlePageChange}
-            />
-            </>
-        )}
+                <>
+                    <Pagination currentPage={currentPage} totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} onPageChange={handlePageChange} />
+                </>
+            )}
         </div>
     );
 }

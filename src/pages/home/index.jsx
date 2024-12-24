@@ -19,7 +19,6 @@ function Index() {
 
     return (
         <div className="relative w-full h-screen overflow-hidden">
-            {/* Divriği görseli ve içerik */}
             <div className="h-full mx-auto bg-gray-100 overflow-hidden object-cover relative">
                 <img src={images[currentImage]} alt="Divriği" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 text-white text-center z-10">

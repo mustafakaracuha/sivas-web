@@ -59,12 +59,10 @@ function index() {
         setCurrentPage(number);
     };
 
-    // Kategoriler
     const categories = ["Tümü", "Kafeler", "Restorantlar", "Tatlıcılar", "Çorbacılar", "Kahvaltıcılar", "Barlar", "Kitap Kafeler"];
 
     return (
         <div className="relative w-full h-full px-32 pt-5 flex flex-col">
-            {/* Filtreler */}
             <div className="w-full flex items-center justify-center flex-col mb-10">
                 <div>
                     <div className="space-x-4 mt-6">
@@ -89,14 +87,11 @@ function index() {
                 </div>
             </div>
 
-            {/* Etkinlikler Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 flex-grow">
                 {currentEvents.length > 0 ? (
                     currentEvents.map((event) => (
                         <div key={event.id} className="bg-white h-[28rem] rounded-lg shadow-lg relative flex flex-col">
-                            {/* Görsel */}
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
-                            {/* İçerik */}
                             <div className="px-4 flex-grow">
                                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">{event.category}</div>
                                 <h3 className="text-lg font-semibold mb-7 text-ellipsis whitespace-nowrap overflow-hidden">{event.title}</h3>
@@ -106,7 +101,6 @@ function index() {
                                 </h3>
                                 <h3 className="text-sm font-normal mt-1">{event.description}</h3>
                             </div>
-                            {/* Rating */}
                             <div className="px-4 pb-4">
                                 <div className="flex items-center gap-1">
                                     {Array.from({ length: event.rating }, (_, index) => (
@@ -125,14 +119,9 @@ function index() {
                 )}
             </div>
 
-            {/* Pagination */}
             {currentEvents.length > 0 && (
                 <>
-                    <Pagination
-                        currentPage={currentPage}
-                        totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} // Doğru toplam sayfa sayısı
-                        onPageChange={handlePageChange}
-                    />
+                    <Pagination currentPage={currentPage} totalPages={Math.ceil(filteredEvents.length / eventsPerPage)} onPageChange={handlePageChange} />
                 </>
             )}
         </div>
