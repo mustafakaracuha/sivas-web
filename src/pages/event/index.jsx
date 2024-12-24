@@ -148,7 +148,7 @@ function index() {
                         <div key={event.id} onClick={() => openEventDetail(event)} className="bg-white cursor-pointer h-[33rem] rounded-lg shadow-lg relative">
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
                             <div className="px-4">
-                                <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">{event.category}</div>
+                            <div className="absolute top-2 right-2 bg-red-500 font-semibold text-white text-[11px] px-2 py-1 rounded-full">{event.category}</div>
                                 <h3 className="text-lg font-semibold mb-2 text-ellipsis whitespace-nowrap overflow-hidden">{event.title}</h3>
                                 <p className="text-sm text-gray-600 mt-5 flex items-center gap-1 mb-2">
                                     <HiOutlineCalendar size={16} /> Tarih: {event.date}
