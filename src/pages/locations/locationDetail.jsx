@@ -24,13 +24,15 @@ const LocationDetailDrawer = ({ location, isOpen, onClose }) => {
                         <p className="text-md text-gray-600 mt-2">{location.description}</p>
                     </div>
                     <hr />
-                    <div className="flex gap-2 mb-2 items-center">
-                        <LuMapPin size={20} />
-                        <p className="text-sm text-gray-600">Yer: {location.location}</p>
+                    <div className="flex items-start justify-between">
+                        <div className="flex gap-2 mb-2 items-center">
+                            <LuMapPin size={20} />
+                            <p className="text-md text-gray-600">{location.location}</p>
+                        </div>
+                        <button onClick={() => handleGoToLocation(location)} className="bg-gray-700 w-24 py-2 text-sm rounded-md text-white">
+                            Bul
+                        </button>
                     </div>
-                    <button onClick={handleGoToLocation} className="bg-gray-700 py-2 rounded-md text-white">
-                        Beni götür
-                    </button>
                 </div>
             </div>
         </div>
