@@ -14,12 +14,12 @@ Bu projeyi çalıştırmak için aşağıdaki adımları izleyin:
 
 1. Depoyu klonlayın:
    ```bash
-   git clone https://github.com/kullanici/sivas-mekan-rehberi.git
+   git clone https://github.com/kullanici/sivas-web.git
    ```
 
 2. Proje dizinine gidin:
    ```bash
-   cd sivas-mekan-rehberi
+   cd sivas-web
    ```
 
 3. Bağımlılıkları yükleyin:
@@ -39,13 +39,13 @@ Projeyi çalıştırdıktan sonra tarayıcınızda [http://localhost:5173](http:
 ## Ekran Görüntüleri
 
 ### Anasayfa
-![Anasayfa](src/assets/screenshot/anasayfa.png)
+![Anasayfa](src/assets/screenshot/1.png)
 
 ### Mekanlar Sayfası
-![Mekanlar Sayfası](src/assets/screenshot/mekanlar.png)
+![Mekanlar Sayfası](src/assets/screenshot/2.png)
 
 ### Etkinlikler Sayfası
-![Etkinlikler Sayfası](src/assets/screenshot/etkinlikler.png)
+![Etkinlikler Sayfası](src/assets/screenshot/3.png)
 
 ### Detay Sayfası
 ![Detay Sayfası](src/assets/screenshot/detay.png)
