@@ -2,7 +2,7 @@ export const eventsData = [
     {
         id: 1,
         title: "Milenaya Mektuplar",
-        description: "Bir müzik etkinliği.",
+        description: "Kafka ve Milena, Prag’da tanışmışlardır. Milena gazetecidir ve iyi derecede Çek diline hakimdir. Kafka ile olan dostlukları, Kafka'nın yazılarını Çekçe’ye çevirmesini istemesiyle başlar. ",
         category: "Tiyatro",
         date: "5 Ocak",
         clock: "19.30",
@@ -16,7 +16,8 @@ export const eventsData = [
     {
         id: 2,
         title: "Benim Küçük Yıldızım",
-        description: "Bir tiyatro gösterisi.",
+        description:
+            "Bir gün bir yıldız kayar… Gökyüzünden… Küçük kız onun peşine düşer… Belki gözündeki yıldıza ulaşamaz; ama bir yıldız şarkıcı kargaya, tavuklar için bir Yıldız gibi pırıl pırıl parlayan bir mısır tanesine, her nefes aldıkça bir yıldız parıldayan ateş böceğine rastlar… Hepsiyle arkadaş olur… Sonunda gerçek yıldızın içinde olduğunu sevgi kardeşlik dostluk olduğunu anlar.",
         category: "Tiyatro",
         date: "25 Aralık",
         clock: "10.00",
@@ -30,7 +31,8 @@ export const eventsData = [
     {
         id: 3,
         title: "Çılgın Mucitler",
-        description: "Bir tiyatro gösterisi.",
+        description:
+            "Bilim ve tiyatro ilk kez sahnede buluşuyor. Çocukların en sevdiği kahramanlardan oluşan bu gösteri size zamanda yolculuk yaptırmaya hazırlanıyor. Birbirinden heyecanlı maceraların en unutulmazına hazır olun. Bilim hiç bu kadar eğlenceli olmamıştı.",
         category: "Tiyatro",
         date: "4 Ocak",
         clock: "15.00",
@@ -44,7 +46,8 @@ export const eventsData = [
     {
         id: 4,
         title: "GİZLİ BAHÇE'NİN BEZELYESİ",
-        description: "Bir tiyatro gösterisi.",
+        description:
+            "Filozof Çocuklar İçin Hikâyeler Projesi’nin ikinci oyunu olarak kaleme alınan Gizli Bahçe’nin Bezelyesi, 3-6 yaş çocuklara özel interaktif anlatım biçimiyle, ormanın ünlü aşçısı Bay Bezelye’nin sevdiği işi yaparken maceraları konu ediniyor.",
         category: "Tiyatro",
         date: "5 Ocak",
         clock: "14.00",
@@ -58,7 +61,7 @@ export const eventsData = [
     {
         id: 5,
         title: "Kalabalık Duası",
-        description: "Bir tiyatro gösterisi.",
+        description: "Fiziksel Tiyatro Araştırmaları, Şatonun Altında'dan sonra yepyeni bir araştırmanın sonucunu seyirciyle paylaşmaya hazır. Bu defa özgün bir metni sahneye taşırken anlatının fiziksel ve disiplinler arası olanaklarının peşine düşüyoruz. ",
         category: "Tiyatro",
         date: "13 Ocak",
         clock: "20.00",
@@ -72,7 +75,7 @@ export const eventsData = [
     {
         id: 6,
         title: "Metin Kemal Kahraman 30. Yıl Konserleri",
-        description: "Bir tiyatro gösterisi.",
+        description: "“Metin & Kemal Kahraman kardeşler, ilk albümlerini yayınlayışlarının 30. yılını kutluyor! 30 yıl boyunca kültürümüzün zenginliğini ezgilerle anlatan, dillerden düşmeyen şarkılarla nice gönüllere dokunan bu özel yolculuğa hep birlikte tanıklık ettik. ",
         category: "Müzik",
         date: "16 Ocak",
         clock: "20.30",
@@ -86,7 +89,7 @@ export const eventsData = [
     {
         id: 7,
         title: "Uğur Böceği ile Kara Kedi",
-        description: "Bir tiyatro gösterisi.",
+        description: "Sevilen kahramanlar Uğur Böceği ve Kara Kedi, şimdi yepyeni bir macera ile sahnede! Marinette ve Adrien’in sihirli dönüşümleriyle hayat bulan bu iki cesur kahraman, izleyicilerini heyecan dolu bir serüvene davet ediyor.",
         category: "Tiyatro",
         date: "17 Ocak",
         clock: "15.00",
@@ -100,7 +103,7 @@ export const eventsData = [
     {
         id: 8,
         title: "Sagopa Kajmer Konseri",
-        description: "Bir tiyatro gösterisi.",
+        description: "Sagopa Kajmer, uzun bir aradan sonra hayranlarının beğenisine sunduğu “Kağıt Kesikleri” albümü, arabesk müziğin güçlü sesi Mine Koşan’la yaptığı “Geceler” düeti ve son teklisi “İstesem de Söyleyemem” ile hayranlarından yine tam not aldı.  ",
         category: "Müzik",
         date: "26 Şubat",
         clock: "20.30",
@@ -114,7 +117,7 @@ export const eventsData = [
     {
         id: 9,
         title: "Çakallarla Dans 7",
-        description: "Bir film gösterisi.",
+        description: "Serinin yedinci halkası, ekibin dünya çapında bir güzellik yarışmasının organizasyonunda görev almak için gittikleri İzmir’de yaşadıkları maceraları takip ediyor.",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "11.15-21.00",
@@ -128,7 +131,7 @@ export const eventsData = [
     {
         id: 10,
         title: "Moana 2",
-        description: "Bir film gösterisi.",
+        description: "Atalarından kendisine rehberlik etmesi için beklenmedik bir çağrı alan Moana, Okyanusya'nın uçsuz bucaksız denizlerine ve tehlikeli, çoktan unutulmuş sulara giderek daha önce deneyimlediği hiçbir maceraya benzemeyen bir maceraya atılır.",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "11.15-20.00",
@@ -142,7 +145,7 @@ export const eventsData = [
     {
         id: 11,
         title: "Mufasa: Aslan Kral",
-        description: "Bir film gösterisi.",
+        description: "Filmde Mufasa, efsanesini Simba ve Nala’nın kızı aslan yavrusu Kiara’ya aktarması için Rafiki’den yardım istiyor. Timon ve Pumbaa da kendilerine özgü şakalarını paylaşmaktan kaçınmıyor. ",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "11.15-21.00",
@@ -156,7 +159,7 @@ export const eventsData = [
     {
         id: 12,
         title: "Nasreddin Hoca Zaman Yolcusu: Kadim Medeniyetler",
-        description: "Bir film gösterisi.",
+        description: "Film, antik medeniyetlerin gizemli dünyasına zaman yolculuğu yapan Nasreddin Hoca ve genç dostlarının maceralarını anlatıyor.",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "11.15-16.30",
@@ -170,7 +173,7 @@ export const eventsData = [
     {
         id: 13,
         title: "Gen 2",
-        description: "Bir film gösterisi.",
+        description: "Hikaye onsekiz yıl sonra devam ediyor. Vahşi, psikopat bir katilin elinden nasıl kurtulabilirsiniz? Korku türündeki Gen 2 filminin yönetmen koltuğunda Gökhan Murat Toktamışoğlu oturuyor.",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "12.15-14.15",
@@ -184,7 +187,7 @@ export const eventsData = [
     {
         id: 14,
         title: "Şımarık",
-        description: "Bir film gösterisi.",
+        description: "Film, zengin bir babanın, şımarık oğlu Mete'ye büyük bir ders vermek için onu zamanda yolculuk yaptığına ikna etmesi ve Mete'nin 16. yüzyıl Osmanlı İmparatorluğu'nda bir köyde olduğuna inanmasıyla gelişen olayları konu ediniyor.",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "12.15-21.00",
@@ -198,7 +201,7 @@ export const eventsData = [
     {
         id: 15,
         title: "Avcı Kraven",
-        description: "Bir film gösterisi.",
+        description: "Film, babasının kendisini ölüme terk ettiği aslan saldırısından özel güçler kazanarak çıkan Sergei Kravinoff'un Avcı Kraven'a dönüşümünü konu ediniyor.",
         category: "Sinema",
         date: "23-24-25-26 Aralık",
         clock: "18.15-20.45",
@@ -212,7 +215,7 @@ export const eventsData = [
     {
         id: 16,
         title: "On Saniye",
-        description: "Bir film gösterisi.",
+        description: "Ülkenin en prestijli lisesi William College’ta sıradışı bir gün. Bir son sınıf öğrencisinin çektiği “kedi öldürme” videosu okuldan atılmasına neden olmuştur.",
         category: "Sinema",
         date: "25 Aralık",
         clock: "20.45",
@@ -226,7 +229,7 @@ export const eventsData = [
     {
         id: 17,
         title: "Rafadan Tayfa: Kapadokya",
-        description: "Bir film gösterisi.",
+        description: "Filmde Rafadan Tayfa, bağ bozumu festivalinde gerçekleşecek “Kapadokya Bilmece Avı” etkinliği için Nevşehir’e gitmiştir.",
         category: "Sinema",
         date: "27-28-29 Aralık",
         clock: "11.00-20.45",

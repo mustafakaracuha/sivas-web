@@ -224,4 +224,22 @@ export const locationsData = [
         rating: 4.8,
         image: "https://lh3.googleusercontent.com/p/AF1QipPB8G9kvuYXegJewsKyObzTONFAS_lLjBoDeDl3=s1360-w1360-h1020-rw",
     }, 
+    {
+        id: 26,
+        title: "David People Coffee",
+        description: "Lezzetli tatlı ve kahvelerin yeni adresi",
+        category: "Kafe",
+        clock: "09.00-00.00",
+        rating: 3.8,
+        image: "https://lh3.googleusercontent.com/p/AF1QipMWMhVLw9_96OPPEH9_MOBzui8GMBd6HLbPZG7b=s1360-w1360-h1020",
+    }, 
+    {
+        id: 27,
+        title: "Macviper",
+        description: "Lezzetli kahvel ve diğer içecekleri tadabilirsiniz",
+        category: "Kafe",
+        clock: "08.30-01.00",
+        rating: 4.3,
+        image: "https://lh3.googleusercontent.com/p/AF1QipMMFGtgeJaYcy8vCXlLZUlUxyGgaT5bj6McYXSi=s1360-w1360-h1020",
+    }, 
 ]

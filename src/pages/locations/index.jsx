@@ -8,6 +8,7 @@ import { PiTreePalm, PiParkLight } from "react-icons/pi";
 import { MdErrorOutline } from "react-icons/md";
 import { MdOutlineMosque } from "react-icons/md";
 
+import LocationDetailDrawer from "./locationDetail";
 import Pagination from "../../components/pagination";
 import { locationsData } from "./data";
 
@@ -16,6 +17,10 @@ function index() {
     const [filter, setFilter] = useState("Tümü");
     const [category, setCategory] = useState("Tümü");
     const [currentPage, setCurrentPage] = useState(1);
+
+    const [selectedLocation, setSelectedLocation] = useState(null);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
     const eventsPerPage = 4;
 
     const categoryMapping = {
@@ -29,6 +34,16 @@ function index() {
         "Doğal Güzellikler": "Doğal Güzellik",
     };
 
+     const handleLocationClick = (event) => {
+        setSelectedLocation(event); 
+        setIsDrawerOpen(true);
+    };
+
+    const closeDrawer = () => {
+        setIsDrawerOpen(false);
+    };
+
+    
     const handleCategoryChange = (event) => {
         const categoryValue = event.target.value;
         setCategory(categoryValue);
@@ -72,7 +87,7 @@ function index() {
                             <button
                                 key={cat}
                                 onClick={() => handleCategoryChange({ target: { value: cat } })}
-                                className={`px-4 transition-all duration-300 py-2 text-sm bg-gray-200 rounded-full ${category === cat ? "!bg-gray-700 text-white" : "bg-white text-gray-500"}`}
+                                className={`px-4 transition-all duration-300 py-2 text-sm rounded-xl ${category === cat ? "!bg-green-700 text-white" : "bg-gray-100 text-gray-500"}`}
                             >
                                 {cat === "Tümü" && <BsGrid size={19} className="inline-block mr-2" />}
                                 {cat === "Camiiler" && <MdOutlineMosque size={19} className="inline-block mr-2" />}
@@ -93,7 +108,7 @@ function index() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 flex-grow">
                 {currentEvents.length > 0 ? (
                     currentEvents.map((event) => (
-                        <div key={event.id} className="bg-white h-[28rem] rounded-lg shadow-lg relative">
+                        <div key={event.id} onClick={() => handleLocationClick(event)}  className="bg-white h-[28rem] rounded-lg shadow-lg relative">
                             <img src={event.image} alt={event.title} className="w-full h-[15rem] object-cover rounded-tr-lg rounded-tl-lg mb-4" />
                             <div className="px-4">
                                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">{event.category}</div>
@@ -109,6 +124,8 @@ function index() {
                     </p>
                 )}
             </div>
+
+            <LocationDetailDrawer location={selectedLocation} isOpen={isDrawerOpen} onClose={closeDrawer} />
 
             {currentEvents.length > 0 && (
                 <>
