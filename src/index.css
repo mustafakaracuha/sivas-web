@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .slide-enter {
-    transform: translateX(100%);
+    transform: translateY(100%);
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -11,13 +11,13 @@
 }
 
 .slide-enter-active {
-    transform: translateX(0%);
+    transform: translateY(0%);
     opacity: 1;
     transition: transform 500ms ease, opacity 500ms ease;
 }
 
 .slide-exit {
-    transform: translateX(0%);
+    transform: translateY(0%);
     opacity: 1;
     position: absolute;
     width: 100%;
@@ -25,18 +25,18 @@
 }
 
 .slide-exit-active {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     opacity: 0;
     transition: transform 500ms ease, opacity 500ms ease;
 }
 
 .slide-appear {
-    transform: translateX(100%);
+    transform: translateY(100%);
     opacity: 0;
 }
 
 .slide-appear-active {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     transition: transform 500ms ease, opacity 500ms ease;
 }
