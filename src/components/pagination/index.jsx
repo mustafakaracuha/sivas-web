@@ -4,8 +4,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setIsVisible(true), 450); // Animasyon başlama süresi
-        return () => clearTimeout(timer); // Temizlik işlemi
+        const timer = setTimeout(() => setIsVisible(true), 450);
+        return () => clearTimeout(timer);
     }, []);
 
     const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
